@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery using HTML CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+
+        <ul class="menulist">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <!-- <a href="#">Services</a> -->
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <!-- <a href="#">Contact</a> -->
+        </ul>
+
+        <div class="menu-right">
+            <a href="https://www.linkedin.com/in/shihab-yasen-51a287295/" class="menu-btn">
+                <span>Let's Talk</span>
+                <i class="ri-message-2-line"></i>
+            </a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+
+        </div>
+    </header>
+    <div class="wrapper">
+        <h1 class="section-header">Portfolio</h1>
+        <div class="main-content">
+            <div class="box">
+                <img src="img/cveportfolio.png" alt="">
+                <div class="img-text">
+                    <div class="content">
+                        <h2>Computer Vision</h2>
+                        <p>Project done on creating an AI model to detect U-turn Signs and Stop Signs. Link in Github.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/nlpportfolio.png" alt="">
+                <div class="img-text">
+                    <div class="content">
+                        <h2>Natural Language Processing</h2>
+                        <p>Project done on creating an AI model to detect the sentiment of movie reviews to identify if they are positive or negative. Link in Github.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/tiefighter.png" alt="">
+                <div class="img-text">
+                    <div class="content">
+                        <h2>3D Modelling</h2>
+                        <p>Created a 3D model of a X-Wing from Star Wars.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/capstone.jpg" alt="">
+                <div class="img-text">
+                    <div class="content">
+                        <h2>Chatbot</h2>
+                        <p>Worked with a company called SCL Systems Pte Ltd to create a sales chatbot for them to answer questions about their products. Link in Github.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/website.png" alt="">
+                <div class="img-text">
+                    <div class="content">
+                        <h2>Web Development</h2>
+                        <p>Created a website for my works using HTML, CSS and Javascript.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/drone.png" alt="">
+                <div class="img-text">
+                    <div class="content">
+                        <h2>3D Model with Animated Background</h2>
+                        <p>3D created Drone with an animated background.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

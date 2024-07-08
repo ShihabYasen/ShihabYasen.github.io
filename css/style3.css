@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Syne", sans-serif;
+}
+:root{
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --main-color: #b68362;
+    --other-color: #8b8a91;
+    --alt-color: #4b4b51;
+    --ann-color: #c7c6d3;
+
+    --h1-font: 6rem;
+    --p-font: 1.1rem;
+
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 20px 14%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .6s ease;
+}
+.logo img{
+    max-width: 80px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.menulist a{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--other-color);
+    margin: 0 32px;
+    transition: all .6s ease;
+}
+.menulist a:hover{
+    color: var(--text-color);
+}
+.menulist a.active{
+    color: var(--text-color);
+}
+.menu-right{
+    display: flex;
+    align-items: center;
+
+}
+.menu-btn{
+    display: inline-block;
+    padding: 15px 26px;
+    background: linear-gradient(135deg, #e1bac5 0%, var(--main-color) 100%);
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 13px;
+}
+.menu-btn:hover{
+    background: linear-gradient(135deg, var(--main-color) 0%, #e1bac5 100%);
+}
+#menu-icon{
+    z-index: 10001;
+    font-size: 40px;
+    margin-left: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 0 14%;
+}
+.wrapper {
+   width: 80%;
+    padding: 30px 0;
+    margin: auto;
+    text-align: center;
+}
+
+.section-header {
+    text-transform: uppercase;
+    line-height: 190px;
+    padding-bottom: 10px;
+    font-size: 50px;
+/*    color: #262626;*/
+    color: white;
+
+    letter-spacing: 2px;
+}
+
+.content {
+    padding: 10%;
+}
+
+.content h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.5;
+}
+
+.main-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 25px;
+    grid-column-gap: 15px;
+}
+
+.main-content .box {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+    height: 250px;
+    overflow: hidden;
+}
+
+.main-content .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-content .box:hover:before {
+    top: 0;
+    right: calc(100% - 5px);
+    z-index: 10;
+}
+
+.main-content .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.main-content .box:hover img {
+    transform: scale(1.1); 
+}
+
+.main-content .box .img-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; 
+    opacity: 0;
+}
+
+.main-content .box:hover .img-text {
+    right: 0;
+    opacity: 1; 
+}
+
+.main-content .box .content {
+    padding: 20px; 
+    text-align: center;
+}
+
+.main-content .box .content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main-content .box .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
